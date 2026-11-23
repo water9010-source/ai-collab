@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "note": "通用動作對照：交辦單只寫左邊的通用動作；各家 AI 照自己那一欄做。表裡沒有的動作，先加進表再寫。<py> 是本機 Python 的完整路徑。",
+  "actions": {
+    "讀全文": {"claude-code": "Read 工具", "codex": "Get-Content -Encoding utf8 -Raw <路徑>", "other": "使用者提供的讀檔方式"},
+    "列資料夾": {"claude-code": "Glob 工具或 Get-ChildItem <路徑>", "codex": "Get-ChildItem <路徑>", "other": "使用者提供的列檔方式"},
+    "算 SHA256": {"claude-code": "Get-FileHash <路徑>", "codex": "Get-FileHash <路徑>", "other": "Get-FileHash <路徑>"},
+    "跑 Python": {"claude-code": "<py> -B -X utf8 <程式>", "codex": "<py> -B -X utf8 <程式>", "other": "<py> -B -X utf8 <程式>"},
+    "寫新檔（不覆寫）": {"claude-code": "Python open(<路徑>, 'x')", "codex": "Python open(<路徑>, 'x')", "other": "Python open(<路徑>, 'x')"}
+  },
+  "tool_names": ["Read", "Write", "Edit", "MultiEdit", "Glob", "Grep", "apply_patch", "shell", "update_plan", "view_image"]
+}
